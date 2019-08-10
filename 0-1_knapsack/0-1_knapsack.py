@@ -1,5 +1,6 @@
  # dpepy - Dynamic Programming Exercises in Python
  # Exercise: 0-1 Knapsack problem
+ # Complexity: O(n*capacity)
 
 def knapsack_01(capacity, weights, values, n = -1):
     
@@ -12,7 +13,7 @@ def knapsack_01(capacity, weights, values, n = -1):
 
             if item == 0 or c == 0:
                 # skip the zeroth item and zero capacity
-                pass
+                continue
 
             elif weights[item-1] <= c:
                 # if there is enough room left

@@ -1,5 +1,6 @@
- # dpepy - Dynamic Programming Exercises in Python
- # Exercise: Coin changing problem
+# dpepy - Dynamic Programming Exercises in Python
+# Exercise: Coin changing problem
+# Complexity: O(n)
 
 def coin_changing(sum, coins = [1,2,5,10,20,50,100,200]):
     result = [0] * (sum+1)    
