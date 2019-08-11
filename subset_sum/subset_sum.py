@@ -23,8 +23,9 @@ def subset_sum(arr, target):
                 # if there is no result for the decreased value, then there is no change in the result ...
                 res[j][i] = res[j][i-1]
             else:
-                # ... otherwise we need to check if it is equal to the current value or check the corresponding earlier result 
-                res[j][i] = res[j][i-1] or arr[i-1] == j or res[j-arr[i-1]][i-1]
+                # ... otherwise we need to check the corresponding earlier result or 
+                # if the new item is equal to the current value (see the trivial zero values) 
+                res[j][i] = res[j][i-1] or res[j-arr[i-1]][i-1]
 
     return res[target][n]
 
